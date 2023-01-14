@@ -1,8 +1,8 @@
 <div align="center">
   <!-- Logo and Title -->
   <img src="/src/main/resources/assets/template/icon.png" alt="logo" width="30%"/>
-  <h1>Meteor Addon Template</h1>
-  <p>A template to allow easy usage of the Meteor Addon API.</p>
+  <h1>Meteor Dynamic Addons</h1>
+  <p>Enables Disabling/Reloading addons at runtime.</p>
 
   <!-- Fancy badges -->
   <img src="https://img.shields.io/badge/Minecraft%20Version-1.19.3-blueviolet" alt="Minecraft Version">

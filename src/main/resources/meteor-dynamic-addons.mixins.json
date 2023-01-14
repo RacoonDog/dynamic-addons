@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.github.racoondog.dynamicaddons.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "CommandsMixin",
+    "HudMixin",
+    "MeteorAddonMixin",
+    "ModulesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
