@@ -5,6 +5,7 @@
   "client": [
     "CommandsMixin",
     "HudMixin",
+    "IModules",
     "MeteorAddonMixin",
     "ModulesMixin"
   ],

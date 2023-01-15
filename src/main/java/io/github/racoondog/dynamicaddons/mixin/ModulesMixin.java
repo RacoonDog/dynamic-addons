@@ -2,6 +2,7 @@ package io.github.racoondog.dynamicaddons.mixin;
 
 import io.github.racoondog.dynamicaddons.DynamicAddons;
 import io.github.racoondog.dynamicaddons.utils.AddonUtils;
+import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.fabricmc.api.EnvType;
@@ -14,8 +15,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Environment(EnvType.CLIENT)
 @Mixin(value = Modules.class, remap = false)
 public abstract class ModulesMixin {
+
     @Inject(method = "add", at = @At("HEAD"))
     private void trackModule(Module _module, CallbackInfo ci) {
         AddonUtils.trackModule(_module, DynamicAddons.STACK_WALKER.getCallerClass().getName());
+    }
+
+    @Inject(method = "registerCategory", at = @At("HEAD"))
+    private static void trackCategory(Category category, CallbackInfo ci) {
+        AddonUtils.trackCategory(category, DynamicAddons.STACK_WALKER.getCallerClass().getName());
     }
 }

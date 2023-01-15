@@ -1,6 +1,6 @@
 package io.github.racoondog.dynamicaddons.utils;
 
-import io.github.racoondog.dynamicaddons.DynamicAddon;
+import io.github.racoondog.dynamicaddons.mixininterface.DynamicAddon;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

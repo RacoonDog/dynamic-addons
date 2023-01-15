@@ -1,11 +1,13 @@
 package io.github.racoondog.dynamicaddons.utils;
 
-import io.github.racoondog.dynamicaddons.DynamicAddon;
+import io.github.racoondog.dynamicaddons.mixin.IModules;
+import io.github.racoondog.dynamicaddons.mixininterface.DynamicAddon;
 import io.github.racoondog.dynamicaddons.DynamicAddons;
 import meteordevelopment.meteorclient.addons.AddonManager;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Command;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
+import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.PreInit;
 import net.fabricmc.api.EnvType;
@@ -79,5 +81,17 @@ public final class AddonUtils { // TODO add system to make sure tracked, but dis
     public static void trackHudElement(HudElementInfo<?> hudElement, String pkgName) {
         MeteorAddon addon = fromPackage(pkgName);
         if (addon != null) ((DynamicAddon) addon).getHudElements().add(hudElement);
+    }
+
+    public static void trackCategory(Category category, String pkgName) {
+        MeteorAddon addon = fromPackage(pkgName);
+        if (addon != null) ((DynamicAddon) addon).getCategories().add(category);
+    }
+
+    public static void disableAddon(MeteorAddon addon) {
+        DynamicAddon dynamic = (DynamicAddon) addon;
+
+        List<Category> CATEGORIES = IModules.getCategories();
+        for (var category : dynamic.getCategories()) CATEGORIES.remove(category);
     }
 }

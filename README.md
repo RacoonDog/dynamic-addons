@@ -1,6 +1,6 @@
 <div align="center">
   <!-- Logo and Title -->
-  <img src="/src/main/resources/assets/template/icon.png" alt="logo" width="30%"/>
+  <img src="/src/main/resources/assets/meteor-dynamic-addons/icon.png" alt="logo" width="30%"/>
   <h1>Meteor Dynamic Addons</h1>
   <p>Enables Disabling/Reloading addons at runtime.</p>
 

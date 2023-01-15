@@ -2,7 +2,7 @@ package io.github.racoondog.dynamicaddons.command;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
-import io.github.racoondog.dynamicaddons.DynamicAddon;
+import io.github.racoondog.dynamicaddons.mixininterface.DynamicAddon;
 import io.github.racoondog.dynamicaddons.utils.ArgumentUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Command;
